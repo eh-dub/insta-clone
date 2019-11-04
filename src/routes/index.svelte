@@ -22,6 +22,8 @@
 
   p {
     margin: 1em auto;
+    text-align: left;
+    font-size: 14px;
   }
 
   @media (min-width: 480px) {
@@ -31,12 +33,14 @@
   }
 
   #posts {
-    max-width: 600px;
   }
 
   .post {
     border-radius: 3px;
-    border: 1px solid #e6e6e6
+    border: 1px solid #e6e6e6;
+    max-width: 600px;
+    margin: 0 auto;
+
   }
 
   .post-header {
@@ -72,6 +76,10 @@
   .post-img {
     object-fit: cover;
   }
+
+  .post-bottom-half {
+    padding: 0 16px;
+  }
 </style>
 
 <svelte:head>
@@ -90,6 +98,17 @@
         <img class="post-img" src="img/{img}" alt="">
       </div>
     {/each}
+    <div class="post-bottom-half">
+      <div class="post-caption">
+        <p><b>{p.user}</b> {p.caption}</p>
+      </div>
+      <div class="post-comments">
+        {#each p.comments as c}
+          <p><b>{c.user}</b> {c.comment}</p>
+        {/each}
+      </div>
+    </div>
+    
   </article>
 {/each}
 </div>
