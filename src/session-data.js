@@ -1,6 +1,7 @@
 export const posts = [
   {
     user: 'healthybts',
+    images: ['healthybts1.jpg'],
     caption: `Fluffy chocolate chip pancakes layered with banana slices and topped with a chocolate drizzle, raspberries, and cacao powder. Who’s a chocolate lover?
 
     1/2 c oats
@@ -31,6 +32,7 @@ export const posts = [
   },
   {
     user: 'panaceas_pantry',
+    images: ['panaceas_pantry1.jpg'],
     caption: `
     No-bake choc hazelnut and coconut slice. Super simple, staple ingredients, totally yum! . .
     If you don’t have/like hazelnuts you could use pecans instead- or even almonds (but that would be my last choice- and you might need extra sweetener). I used vegan milk choc for the topping, and wouldn’t recommend subbing for a darker choc unless you add extra sweetener in- it’s needed to balance out the flavours x
