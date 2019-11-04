@@ -101,16 +101,19 @@ export const posts = [
 
 export const profiles = {
   "healthybts": {
+    name: "healthybts",
     bio: `A healthy living
     📍LA`
   },
   "panaceas_pantry": {
+    name: "panaceas_pantry",
     bio: `🍄 Simple, plant-filled Wholefood recipes
     📷 Food Photographer + naturopath
     ✉️ work Enquiries: panaceas.pantry@gmail.com`,
     website: "www.panaceaspantryblog.com"
   },
   "illegalvegan": {
+    name: "illegalvegal",
     bio: `Designing a sustainable routine and philosophy of nutrition
     🌱 Plant-based Foods
     😈 So good it’s illegal

@@ -145,7 +145,7 @@
   <article class="post">
     <header class="post-header">
       <img class="post-pro-pic" src="img/{p.user}.jpg" alt="">
-      <h2 id="user-name">{p.user}</h2>
+      <h2 id="user-name"><a href="profiles/{p.user}">{p.user}</a></h2>
     </header>
     {#each p.images as img}
       <div class="">
