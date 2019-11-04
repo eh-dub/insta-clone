@@ -80,6 +80,26 @@
   .post-bottom-half {
     padding: 0 16px;
   }
+
+  .post-action-bar {
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .heart {
+    font-size: 24px;
+    transition: transform 0.25s;
+    line-height: 36px;
+  }
+
+  .heart:hover {
+    transform: scale(1.5);
+  }
+
+  .glyphicon-heart {
+    color: #ED4956;
+  }
+
 </style>
 
 <svelte:head>
@@ -99,6 +119,13 @@
       </div>
     {/each}
     <div class="post-bottom-half">
+      <div class="post-action-bar">
+        {#if !p.liked}
+          <i class="glyphicon glyphicon-heart-empty heart" on:click="{() => p.liked = true}"></i>
+        {:else}
+          <i class="glyphicon glyphicon-heart heart" on:click="{() => p.liked = false}"></i>
+        {/if}
+      </div>
       <div class="post-caption">
         <p><b>{p.user}</b> {p.caption}</p>
       </div>

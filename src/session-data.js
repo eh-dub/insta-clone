@@ -1,6 +1,7 @@
 export const posts = [
   {
     user: 'healthybts',
+    liked: false,
     images: ['healthybts1.jpg'],
     caption: `Fluffy chocolate chip pancakes layered with banana slices and topped with a chocolate drizzle, raspberries, and cacao powder. Who’s a chocolate lover?
 
@@ -32,6 +33,7 @@ export const posts = [
   },
   {
     user: 'panaceas_pantry',
+    liked: false,
     images: ['panaceas_pantry1.jpg'],
     caption: `
     No-bake choc hazelnut and coconut slice. Super simple, staple ingredients, totally yum! . .
