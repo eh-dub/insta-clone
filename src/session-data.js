@@ -76,6 +76,26 @@ export const posts = [
       }
     ]
 
+  },
+  {
+    user: "illegalvegan",
+    liked: false,
+    images: ["illegalvegan1.jpg"],
+    caption: `When classes are cancelled so you finally have time to put together a decent breakfast... 👏👏 My complete breakfast ritual includes a serving of fruit, a warm cup of water with lemon🍋, a cup of coffee/tea☕️🍵, and a carb with protein. @traderjoes crumpets are now my favorite treat. It soaks up butter sooo good!!! Which topping is your favorite😍? 1️⃣ @miyokoscreamery European style butter + @monsieurmarcelsm red raspberry preserve
+    2️⃣ @costco kirkland almond butter + flaxseeds from @berkeleybowl and hemp hearts from @traderjoes
+    3️⃣ @miyokoscreamery butter + almond butter on a piece of toast
+    
+    Don’t be like me eating breakfast at my work desk...`,
+    comments: [
+      {
+        user: "illegalvegan",
+        comment: `#illegalvegan #illegalvegans #vegan #veganfood #veganfoodie #whatveganseat #bayareavegan #sandiegovegan #veganeats #herbivore #plantbased #plantbasedfoods #veganrecipes #healthyvegan #veganinspo #veganvibes #veganlove #vegancommunity #veggies #poweredbyplants #vegansofinstagram #food #foodie #vegancook #healthy #nutrition #vegancommunity #forksoverknives #veganfoodspot #breakfast`
+      },
+      {
+        user: "healthybts",
+        comment: `I have to try the crumpets- didn’t know about those. So many vegan options at Trader Joes💚❤️💚❤️`
+      }
+    ]
   }
 ];
 
@@ -89,6 +109,14 @@ export const profiles = {
     📷 Food Photographer + naturopath
     ✉️ work Enquiries: panaceas.pantry@gmail.com`,
     website: "www.panaceaspantryblog.com"
+  },
+  "illegalvegan": {
+    bio: `Designing a sustainable routine and philosophy of nutrition
+    🌱 Plant-based Foods
+    😈 So good it’s illegal
+    😎 All original content
+    Bay Area | San Diego`,
+    website: "https://msha.ke/illegalvegan/"
   }
 }
 

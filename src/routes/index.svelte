@@ -40,7 +40,7 @@
     border: 1px solid #e6e6e6;
     max-width: 600px;
     margin: 0 auto;
-
+    margin-bottom: 75px;
   }
 
   .post-header {
