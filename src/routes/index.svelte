@@ -77,7 +77,7 @@
     object-fit: cover;
   }
 
-  .post-bottom-half {
+  .post-bottom-half div {
     padding: 0 16px;
   }
 
@@ -100,6 +100,40 @@
     color: #ED4956;
   }
 
+  .post-comment-box {
+    height: 55px;
+    padding: 16px;
+    border-top: 1px solid #e6e6e6;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .post-comment-box textarea {
+    border: 0;
+    resize: none;
+    height: 18px;
+    overflow: hidden;
+    width: 95%;
+  }
+
+  textarea::placeholder {
+    color: #999999;
+    font-size: 14px;
+  }
+
+  .post-comment-btn {
+    border: 0;
+    color: #3897f0;
+    background-color: white;
+    font-weight: 600;
+  }
+
+  .post-comment-btn.disabled {
+    opacity: 0.3;
+  }
+
 </style>
 
 <svelte:head>
@@ -107,7 +141,7 @@
 </svelte:head>
 
 <div id="posts">
-{#each posts as p}
+{#each posts as p, i}
   <article class="post">
     <header class="post-header">
       <img class="post-pro-pic" src="img/{p.user}.jpg" alt="">
@@ -134,6 +168,14 @@
           <p><b>{c.user}</b> {c.comment}</p>
         {/each}
       </div>
+      <div class="post-comment-box">
+        <textarea bind:value="{commentBoxes[i]}" placeholder="Add a comment..."></textarea>
+        <button class="post-comment-btn" 
+                on:click="{() => addComment(p, i, commentBoxes[i])}"
+                disabled="{!commentBoxes[i] || commentBoxes[i].length === 0}"
+                class:disabled="{!commentBoxes[i] || commentBoxes[i].length === 0}"
+          >Post</button>
+      </div>
     </div>
     
   </article>
@@ -146,8 +188,22 @@ import { stores } from '@sapper/app';
 const { preloading, page, session } = stores();
 console.log(session);
 let posts = [];
+let profiles = {};
+let currentUser = {};
+
+let commentBoxes = [];
+
+
 session.subscribe(v => {
   posts = v.posts;
+  currentUser = v.currentUser;
+
   console.log(v);
 })
+
+function addComment(post, index, comment) {
+  posts[index].comments.push({user: currentUser.name, comment: commentBoxes[index]});
+  commentBoxes[index] = "";
+  session.set({posts, profiles, currentUser});
+}
 </script>

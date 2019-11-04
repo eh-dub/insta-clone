@@ -91,3 +91,7 @@ export const profiles = {
     website: "www.panaceaspantryblog.com"
   }
 }
+
+export const currentUser = {
+  name: "illegalvegan"
+}
