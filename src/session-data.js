@@ -113,7 +113,7 @@ export const profiles = {
     website: "www.panaceaspantryblog.com"
   },
   "illegalvegan": {
-    name: "illegalvegal",
+    name: "illegalvegan",
     bio: `Designing a sustainable routine and philosophy of nutrition
     🌱 Plant-based Foods
     😈 So good it’s illegal
